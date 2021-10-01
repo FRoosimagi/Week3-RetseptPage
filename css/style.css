@@ -2,6 +2,7 @@
 
 body{
     background-color: rgb(236, 219, 171);
+    overflow-x: hidden;
 }
 
 .heading {
@@ -12,14 +13,26 @@ body{
     margin: 5px auto;
 }
 .headingline{
-    text-align: center;
-    color: rgb(124, 88, 10);
     margin-left: 10%;
     margin-right: 10%;
     background-color: rgb(240, 221, 193);
     border-radius: 50%;
+    animation: header;
+    animation-duration: 3s;
+    position: relative;
+}
+.headingline h1{
+    color: rgb(124, 88, 10);
+    text-align: center;
     font-family: 'Indie Flower', cursive;
 }
+
+@keyframes header {
+    0% {top: -250px}
+    100% {top: 0}
+
+}
+
 .img-file{
     width: 75%;
     margin: 0 auto;
@@ -35,37 +48,86 @@ img{
 }
 
 .heading2{
+    background-color: rgb(233, 165, 120);
+}
+
+.heading2 h3{
     text-align: center;
     color: brown;
-    background-color: rgb(233, 165, 120);
     font-family: 'Indie Flower', cursive;
+    animation: left;
+    animation-duration: 3s;
+    position: relative;
 }
+@keyframes left {
+    0% {left: -1000px}
+    75% {left: 20px}
+    100% {left: 0;}
+    0% {opacity: 0;}
+    15% {opacity: 75%;}
+    100% {opacity: 100%;}
+    
+}
+
 .koostisosad{
-    color: rgb(100, 85, 85);
-    text-align: left;
     border: solid 2px black;
     border-radius: 10px;
     margin: 15px auto;
     width: 75%;
     margin-top: 5px;
     background-color: rgb(228, 222, 208);
-    
-    
 }
-.heading3{
-    text-align: center;
-    color: brown;
-    background-color: rgb(233, 165, 120);
-    font-family: 'Indie Flower', cursive;
-}
-.valmistamine{
+
+.koostisosad ul{
     color: rgb(100, 85, 85);
     text-align: left;
+    animation: right;
+    animation-duration: 4s;
+    animation-delay: 0.4s;
+    position: relative;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+.heading3{
+    
+    background-color: rgb(233, 165, 120);
+    
+}
+
+.heading3 h3{
+    text-align: center;
+    color: brown;
+    font-family: 'Indie Flower', cursive;
+    animation: right;
+    animation-duration: 3s;
+    position: relative;
+}
+@keyframes right {
+    0% {right: -1000px}
+    75% {right: 20px}
+    100% {right: 0;}
+    0% {opacity: 0;}
+    15% {opacity: 75%;}
+    100% {opacity: 100%;}
+    
+}
+
+.valmistamine{
     border: solid 2px black;
     border-radius: 10px;
     margin: 15px auto;
     width: 75%;
     background-color: rgb(228, 222, 208);
+}
+.valmistamine ol{
+    color: rgb(100, 85, 85);
+    text-align: left;
+    animation: left;
+    animation-duration: 4s;
+    animation-delay: 0.4s;
+    position: relative;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 .links{
     border: 1px solid black;
